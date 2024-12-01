@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Text App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="sidebar">
+        <div class="note-controls">
+            <button id="add-text">Add Text</button>
+            <button id="undo-btn">Undo</button>
+            <button id="redo-btn">Redo</button>
+        </div>
+        
+        <select id="font-selector">
+            <option value="Arial">Arial</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Courier New">Courier New</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Verdana">Verdana</option>
+        </select>
+        
+        <label for="size-selector">Font Size:</label>
+        <input type="range" id="size-selector" min="12" max="36" value="16">
+    </div>
+    
+    <div id="workspace"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
