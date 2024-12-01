@@ -1,6 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     display: flex;
+    flex-direction: column;
     height: 100vh;
     margin: 0;
     background-color: #f0f0f0;
@@ -51,6 +52,7 @@ body {
     display: flex;
     gap: 5px;
     margin-bottom: 10px;
+    flex-wrap: wrap;
 }
 
 .note-controls button {
@@ -63,4 +65,54 @@ body {
 
 #font-selector, #size-selector {
     margin-bottom: 10px;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    #sidebar {
+        width: 100%;
+        padding: 15px;
+    }
+
+    #workspace {
+        flex-grow: 1;
+        overflow: auto;
+    }
+}
+
+
+@media (max-width: 480px) {
+    #sidebar {
+        padding: 10px;
+    }
+
+    .text-block {
+        font-size: 14px;
+        padding: 5px;
+    }
+
+    .delete-btn {
+        width: 18px;
+        height: 18px;
+        font-size: 10px;
+    }
+
+    .note-controls {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .note-controls button {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    #font-selector, #size-selector {
+        width: 100%;
+        margin-bottom: 10px;
+    }
 }
